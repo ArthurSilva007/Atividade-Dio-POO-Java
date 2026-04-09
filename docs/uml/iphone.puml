@@ -1,0 +1,37 @@
+@startuml
+title Componente iPhone - POO Java
+
+interface ReprodutorMusical {
+  +tocar()
+  +pausar()
+  +selecionarMusica()
+}
+
+interface AparelhoTelefonico {
+  +ligar()
+  +atender()
+  +iniciarCorreiodeVoz()
+}
+
+interface NavegadorInternet {
+  +exibirPagina(url: String)
+  +adicionarAba()
+  +atualizarPagina()
+}
+
+class IPhone {
+  +tocar()
+  +pausar()
+  +selecionarMusica()
+  +ligar()
+  +atender()
+  +iniciarCorreiodeVoz()
+  +exibirPagina(url: String)
+  +adicionarAba()
+  +atualizarPagina()
+}
+
+IPhone ..|> ReprodutorMusical
+IPhone ..|> AparelhoTelefonico
+IPhone ..|> NavegadorInternet
+@enduml
